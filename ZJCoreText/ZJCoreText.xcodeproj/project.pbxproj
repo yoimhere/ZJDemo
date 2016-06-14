@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD412EB11D1002A800F796A3 /* articles.md in Sources */ = {isa = PBXBuildFile; fileRef = CD412EB01D1002A800F796A3 /* articles.md */; };
 		CD5D3BCD1D0EE31000084C97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BCC1D0EE31000084C97 /* main.m */; };
 		CD5D3BD01D0EE31000084C97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BCF1D0EE31000084C97 /* AppDelegate.m */; };
 		CD5D3BD31D0EE31000084C97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BD21D0EE31000084C97 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD412EB01D1002A800F796A3 /* articles.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = articles.md; sourceTree = "<group>"; };
 		CD5D3BC81D0EE31000084C97 /* ZJCoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJCoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5D3BCC1D0EE31000084C97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5D3BCE1D0EE31000084C97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		CD5D3BCA1D0EE31000084C97 /* ZJCoreText */ = {
 			isa = PBXGroup;
 			children = (
+				CD412EB01D1002A800F796A3 /* articles.md */,
 				CD5D3BCE1D0EE31000084C97 /* AppDelegate.h */,
 				CD5D3BCF1D0EE31000084C97 /* AppDelegate.m */,
 				CD5D3BD11D0EE31000084C97 /* ViewController.h */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5D3BD31D0EE31000084C97 /* ViewController.m in Sources */,
+				CD412EB11D1002A800F796A3 /* articles.md in Sources */,
 				CD5D3BD01D0EE31000084C97 /* AppDelegate.m in Sources */,
 				CD5D3BCD1D0EE31000084C97 /* main.m in Sources */,
 			);

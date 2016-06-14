@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property(assign, nonatomic) NSInteger allCount;
+
 @end
 
 @implementation ViewController
@@ -18,12 +20,53 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self testMainTheard];
+    self.allCount = 20;
+    [self runLoopModeExample1];
+}
+
+#pragma mark -
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.allCount;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellFlg = @"UITableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellFlg];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellFlg];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    return cell;
 }
 
 
-//测试Runloop主线程
+#pragma mark -
+#pragma mark - 练习
 
+/**
+ *  RunLoopMode案例一
+ */
+
+- (void)runLoopModeExample1{
+    NSLog(@"runLoopModeExample1 -> start");
+    [self performSelector:@selector(done) withObject:nil afterDelay:10 inModes:@[NSRunLoopCommonModes]];
+}
+
+- (void)done{
+    self.allCount += 10;
+    [self.tableView reloadData];
+    NSLog(@"runLoopModeExample1 -> end");
+}
+
+/**
+ *  测试Runloop主线程
+ */
 - (void)testMainTheard{
     // 获得当前thread的Run loop
     CFRunLoopRef cfRunLoop  = CFRunLoopGetCurrent();
@@ -47,6 +90,21 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 {
     logRunLoopActivity(activity);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void logRunLoopActivity(CFRunLoopActivity activity){
     NSString *text = nil;

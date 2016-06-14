@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD412EAF1D10021000F796A3 /* articles.md in Sources */ = {isa = PBXBuildFile; fileRef = CD412EAE1D10021000F796A3 /* articles.md */; };
+		CD412EB31D10035C00F796A3 /* articles.md in Sources */ = {isa = PBXBuildFile; fileRef = CD412EB21D10035C00F796A3 /* articles.md */; };
 		CD5D3BAA1D0EE2BF00084C97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BA91D0EE2BF00084C97 /* main.m */; };
 		CD5D3BAD1D0EE2BF00084C97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BAC1D0EE2BF00084C97 /* AppDelegate.m */; };
 		CD5D3BB01D0EE2BF00084C97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D3BAF1D0EE2BF00084C97 /* ViewController.m */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD412EAE1D10021000F796A3 /* articles.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = articles.md; sourceTree = "<group>"; };
+		CD412EB21D10035C00F796A3 /* articles.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = articles.md; sourceTree = "<group>"; };
 		CD5D3BA51D0EE2BF00084C97 /* ZJRunloop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJRunloop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5D3BA91D0EE2BF00084C97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5D3BAB1D0EE2BF00084C97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +44,7 @@
 		CD5D3B9C1D0EE2BF00084C97 = {
 			isa = PBXGroup;
 			children = (
+				CD412EB21D10035C00F796A3 /* articles.md */,
 				CD5D3BA71D0EE2BF00084C97 /* ZJRunloop */,
 				CD5D3BA61D0EE2BF00084C97 /* Products */,
 			);
@@ -60,7 +61,6 @@
 		CD5D3BA71D0EE2BF00084C97 /* ZJRunloop */ = {
 			isa = PBXGroup;
 			children = (
-				CD412EAE1D10021000F796A3 /* articles.md */,
 				CD5D3BAB1D0EE2BF00084C97 /* AppDelegate.h */,
 				CD5D3BAC1D0EE2BF00084C97 /* AppDelegate.m */,
 				CD5D3BAE1D0EE2BF00084C97 /* ViewController.h */,
@@ -153,8 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5D3BB01D0EE2BF00084C97 /* ViewController.m in Sources */,
-				CD412EAF1D10021000F796A3 /* articles.md in Sources */,
 				CD5D3BAD1D0EE2BF00084C97 /* AppDelegate.m in Sources */,
+				CD412EB31D10035C00F796A3 /* articles.md in Sources */,
 				CD5D3BAA1D0EE2BF00084C97 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

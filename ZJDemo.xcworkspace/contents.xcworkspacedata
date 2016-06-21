@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZJCoreAnimation/ZJCoreAnimation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZJCoreText/ZJCoreText.xcodeproj">
    </FileRef>
    <FileRef

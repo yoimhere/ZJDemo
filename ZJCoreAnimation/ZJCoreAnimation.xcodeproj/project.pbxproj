@@ -13,6 +13,12 @@
 		CD522C881D1992F1009BD435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD522C861D1992F1009BD435 /* Main.storyboard */; };
 		CD522C8A1D1992F1009BD435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD522C891D1992F1009BD435 /* Assets.xcassets */; };
 		CD522C8D1D1992F1009BD435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD522C8B1D1992F1009BD435 /* LaunchScreen.storyboard */; };
+		CD522C951D1995A5009BD435 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522C941D1995A5009BD435 /* Spaceship.png */; };
+		CD522C971D1995C9009BD435 /* Cone.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522C961D1995C9009BD435 /* Cone.png */; };
+		CD522C991D1995CD009BD435 /* Igloo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522C981D1995CD009BD435 /* Igloo.png */; };
+		CD522C9D1D1995FA009BD435 /* Key.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522C9C1D1995FA009BD435 /* Key.png */; };
+		CD522C9F1D1995FE009BD435 /* Anchor.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522C9E1D1995FE009BD435 /* Anchor.png */; };
+		CD522CA11D199617009BD435 /* Snowman.png in Resources */ = {isa = PBXBuildFile; fileRef = CD522CA01D199617009BD435 /* Snowman.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		CD522C891D1992F1009BD435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD522C8C1D1992F1009BD435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD522C8E1D1992F1009BD435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD522C941D1995A5009BD435 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		CD522C961D1995C9009BD435 /* Cone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cone.png; sourceTree = "<group>"; };
+		CD522C981D1995CD009BD435 /* Igloo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Igloo.png; sourceTree = "<group>"; };
+		CD522C9C1D1995FA009BD435 /* Key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Key.png; sourceTree = "<group>"; };
+		CD522C9E1D1995FE009BD435 /* Anchor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anchor.png; sourceTree = "<group>"; };
+		CD522CA01D199617009BD435 /* Snowman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snowman.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 		CD522C7C1D1992F1009BD435 /* ZJCoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CD522CA01D199617009BD435 /* Snowman.png */,
+				CD522C9E1D1995FE009BD435 /* Anchor.png */,
+				CD522C9C1D1995FA009BD435 /* Key.png */,
+				CD522C981D1995CD009BD435 /* Igloo.png */,
+				CD522C961D1995C9009BD435 /* Cone.png */,
+				CD522C941D1995A5009BD435 /* Spaceship.png */,
 				CD522C801D1992F1009BD435 /* AppDelegate.h */,
 				CD522C811D1992F1009BD435 /* AppDelegate.m */,
 				CD522C831D1992F1009BD435 /* ViewController.h */,
@@ -110,6 +128,7 @@
 				TargetAttributes = {
 					CD522C791D1992F1009BD435 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Z2KB37YE54;
 					};
 				};
 			};
@@ -136,8 +155,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD522C9D1D1995FA009BD435 /* Key.png in Resources */,
+				CD522C991D1995CD009BD435 /* Igloo.png in Resources */,
 				CD522C8D1D1992F1009BD435 /* LaunchScreen.storyboard in Resources */,
+				CD522C971D1995C9009BD435 /* Cone.png in Resources */,
+				CD522C951D1995A5009BD435 /* Spaceship.png in Resources */,
 				CD522C8A1D1992F1009BD435 /* Assets.xcassets in Resources */,
+				CD522CA11D199617009BD435 /* Snowman.png in Resources */,
+				CD522C9F1D1995FE009BD435 /* Anchor.png in Resources */,
 				CD522C881D1992F1009BD435 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZJCoreAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OneByte.ZJCoreAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +299,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZJCoreAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OneByte.ZJCoreAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +327,7 @@
 				CD522C931D1992F1009BD435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

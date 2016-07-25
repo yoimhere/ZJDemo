@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD8189971D45DE80000862EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8189961D45DE80000862EE /* main.m */; };
+		CD81899A1D45DE80000862EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8189991D45DE80000862EE /* AppDelegate.m */; };
+		CD8189A01D45DE80000862EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD81899E1D45DE80000862EE /* Main.storyboard */; };
+		CD8189A21D45DE80000862EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8189A11D45DE80000862EE /* Assets.xcassets */; };
+		CD8189A51D45DE80000862EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8189A31D45DE80000862EE /* LaunchScreen.storyboard */; };
+		CDF57F6F1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF57F6E1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.m */; };
+		CDF57F721D45E4E200523CAD /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF57F711D45E4E200523CAD /* ZJTabBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD8189921D45DE80000862EE /* ZJCustomTarbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJCustomTarbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8189961D45DE80000862EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD8189981D45DE80000862EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD8189991D45DE80000862EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD81899F1D45DE80000862EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD8189A11D45DE80000862EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD8189A41D45DE80000862EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD8189A61D45DE80000862EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF57F6D1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+ZJCustomTabbar.h"; sourceTree = "<group>"; };
+		CDF57F6E1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+ZJCustomTabbar.m"; sourceTree = "<group>"; };
+		CDF57F701D45E4E200523CAD /* ZJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBar.h; sourceTree = "<group>"; };
+		CDF57F711D45E4E200523CAD /* ZJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD81898F1D45DE80000862EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD8189891D45DE7F000862EE = {
+			isa = PBXGroup;
+			children = (
+				CD8189941D45DE80000862EE /* ZJCustomTarbar */,
+				CD8189931D45DE80000862EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD8189931D45DE80000862EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD8189921D45DE80000862EE /* ZJCustomTarbar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD8189941D45DE80000862EE /* ZJCustomTarbar */ = {
+			isa = PBXGroup;
+			children = (
+				CDF57F6C1D45E20500523CAD /* ZJCustomTabbar */,
+				CD8189981D45DE80000862EE /* AppDelegate.h */,
+				CD8189991D45DE80000862EE /* AppDelegate.m */,
+				CD81899E1D45DE80000862EE /* Main.storyboard */,
+				CD8189A11D45DE80000862EE /* Assets.xcassets */,
+				CD8189A31D45DE80000862EE /* LaunchScreen.storyboard */,
+				CD8189A61D45DE80000862EE /* Info.plist */,
+				CD8189951D45DE80000862EE /* Supporting Files */,
+			);
+			path = ZJCustomTarbar;
+			sourceTree = "<group>";
+		};
+		CD8189951D45DE80000862EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD8189961D45DE80000862EE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDF57F6C1D45E20500523CAD /* ZJCustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CDF57F6D1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.h */,
+				CDF57F6E1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.m */,
+				CDF57F701D45E4E200523CAD /* ZJTabBar.h */,
+				CDF57F711D45E4E200523CAD /* ZJTabBar.m */,
+			);
+			path = ZJCustomTabbar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD8189911D45DE80000862EE /* ZJCustomTarbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD8189A91D45DE80000862EE /* Build configuration list for PBXNativeTarget "ZJCustomTarbar" */;
+			buildPhases = (
+				CD81898E1D45DE80000862EE /* Sources */,
+				CD81898F1D45DE80000862EE /* Frameworks */,
+				CD8189901D45DE80000862EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZJCustomTarbar;
+			productName = ZJCustomTarbar;
+			productReference = CD8189921D45DE80000862EE /* ZJCustomTarbar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD81898A1D45DE7F000862EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = yuzhijie;
+				TargetAttributes = {
+					CD8189911D45DE80000862EE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = CD81898D1D45DE7F000862EE /* Build configuration list for PBXProject "ZJCustomTarbar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD8189891D45DE7F000862EE;
+			productRefGroup = CD8189931D45DE80000862EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD8189911D45DE80000862EE /* ZJCustomTarbar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD8189901D45DE80000862EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8189A51D45DE80000862EE /* LaunchScreen.storyboard in Resources */,
+				CD8189A21D45DE80000862EE /* Assets.xcassets in Resources */,
+				CD8189A01D45DE80000862EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD81898E1D45DE80000862EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD81899A1D45DE80000862EE /* AppDelegate.m in Sources */,
+				CDF57F721D45E4E200523CAD /* ZJTabBar.m in Sources */,
+				CD8189971D45DE80000862EE /* main.m in Sources */,
+				CDF57F6F1D45E21100523CAD /* UITabBarController+ZJCustomTabbar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD81899E1D45DE80000862EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD81899F1D45DE80000862EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD8189A31D45DE80000862EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD8189A41D45DE80000862EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD8189A71D45DE80000862EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD8189A81D45DE80000862EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD8189AA1D45DE80000862EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZJCustomTarbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzhijie.ZJCustomTarbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CD8189AB1D45DE80000862EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZJCustomTarbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzhijie.ZJCustomTarbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD81898D1D45DE7F000862EE /* Build configuration list for PBXProject "ZJCustomTarbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8189A71D45DE80000862EE /* Debug */,
+				CD8189A81D45DE80000862EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD8189A91D45DE80000862EE /* Build configuration list for PBXNativeTarget "ZJCustomTarbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8189AA1D45DE80000862EE /* Debug */,
+				CD8189AB1D45DE80000862EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD81898A1D45DE7F000862EE /* Project object */;
+}

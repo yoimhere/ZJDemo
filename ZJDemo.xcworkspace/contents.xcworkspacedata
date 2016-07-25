@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZJCustomTarbar/ZJCustomTarbar.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZJOpenGL_ES/ZJOpenGL_ES.xcodeproj">
    </FileRef>
    <FileRef

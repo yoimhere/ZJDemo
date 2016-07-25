@@ -8,7 +8,15 @@
 
 #import "ViewController.h"
 
+#import <OpenGLES/ES2/gl.h>
+#import <OpenGLES/ES2/glext.h>
+
 @interface ViewController ()
+
+@property(strong, nonatomic) CAEAGLLayer *eaglLayer;
+@property(strong, nonatomic) EAGLContext *context;
+@property(assign, nonatomic) GLuint colorRenderBuffer;
+@property(assign, nonatomic) GLuint frameBuffer;
 
 @end
 
@@ -16,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

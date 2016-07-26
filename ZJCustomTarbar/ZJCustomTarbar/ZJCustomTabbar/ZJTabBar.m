@@ -8,54 +8,202 @@
 
 #import "ZJTabBar.h"
 
+@implementation ZJItem
+@end
+
 @interface ZJTabBar ()
 
-@property(strong, nonatomic) NSMutableArray *myItems;
+@property(nonatomic, strong) UIButton *selectedButton;
+@property(nonatomic, strong) NSMutableArray *myItems;
+@property(nonatomic, copy) void(^itemSelected)(NSInteger index);
 
 @end
 
 @implementation ZJTabBar
 
-- (void)layoutSubviews{
+#pragma mark -
+#pragma mark - Init
+
+- (instancetype)initWithItemSelected:(void(^)(NSInteger selectIndex))itemSelected
+{
+    if (self = [super init])
+    {
+        self.itemSelected = itemSelected;
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    NSAssert(false, @"init invalided");
+    return nil;
+}
+
+#pragma mark -
+#pragma mark - Main
+
+- (void)layoutSubviews
+{
     [super layoutSubviews];
     
+    [self removeOldItems];
+    [self generateOriginItems];
+    [self sortCustomsItems];
+    [self generateCustomItems];
+    
+    [self setupViews];
+}
+
+- (void)removeOldItems
+{
+    for (ZJItem *oldItem in self.myItems) {
+        [oldItem.buttonView removeFromSuperview];
+    }
     [self.myItems removeAllObjects];
-    NSInteger i = 0;
-    for (UITabBarItem *barItem in self.items)
+}
+
+- (void)generateOriginItems
+{
+    for (NSInteger i = 0; i < self.items.count; i++)
     {
-       UIView *view = [barItem valueForKey:@"view"];
+        UITabBarItem *barItem = self.items[i];
+        UIView *view = [barItem valueForKey:@"view"];
         view.hidden = YES;
         
-        UIButton *btn = [[UIButton alloc] initWithFrame: view.frame];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:barItem.title forState:UIControlStateNormal];
-        
         [btn setImage:barItem.image forState:UIControlStateNormal];
-        if (self.myItems.count == 1) {
-            [btn setImageEdgeInsets:UIEdgeInsetsMake(-100, 0, 100, 0)];
-        }
         [btn setImage:barItem.selectedImage forState:UIControlStateSelected];
-        [btn addTarget:self action:@selector(zj_selectItem:) forControlEvents:UIControlEventTouchUpInside];
-        btn.tag = i;
+        [btn addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
         
-        [self.myItems addObject:btn];
-        [self addSubview:btn];
-        i++;
+        ZJItem *item = [ZJItem new];
+        item.index = i;
+        item.buttonView = btn;
+        item.type = ZJItemTypeOrigin;
+        
+        [self.myItems addObject:item];
     }
 }
 
 
-- (void)zj_selectItem:(UIView *)item{
-    if ([_zj_delegate respondsToSelector:@selector(zj_tabbar:selectIndex:)]) {
-        [_zj_delegate zj_tabbar:self selectIndex:item.tag];
+- (void)sortCustomsItems
+{
+    NSSortDescriptor *typeSorter = [NSSortDescriptor sortDescriptorWithKey:@"type" ascending:NO comparator:^NSComparisonResult(NSNumber *item1, NSNumber *item2)
+                                    {
+        if(item2 > item1)
+        {
+            return NSOrderedDescending;
+        }
+        else if(item1 > item2)
+        {
+            return NSOrderedAscending;
+        }
+        return NSOrderedSame;
+    }];
+                                    
+    NSSortDescriptor *indexSorter = [[NSSortDescriptor alloc] initWithKey:@"index" ascending:YES];
+
+    self.customItems = [self.customItems sortedArrayUsingDescriptors:@[typeSorter,indexSorter]];
+}
+
+
+- (void)generateCustomItems
+{
+    for (ZJItem *customItem in self.customItems)
+    {
+        ZJItemType type = customItem.type;
+        switch (type)
+        {
+            case ZJItemTypeInsert:
+            {
+                [self.myItems insertObject:customItem atIndex:customItem.index];
+                break;
+            }
+                
+            case ZJItemTypeReplace:
+            {
+                [customItem.buttonView addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
+                [self.myItems replaceObjectAtIndex:customItem.index withObject:customItem];
+                break;
+            }
+                
+            default:
+                break;
+        }
+    }
+}
+
+- (void)setupViews
+{
+    CGSize size = self.frame.size;
+    NSInteger itemCount = self.myItems.count;
+    CGFloat itemW = size.width / self.myItems.count;
+    
+    for (NSInteger i = 0; i < itemCount; i++)
+    {
+        ZJItem *customItem = self.myItems[i];
+        UIView *itemView = customItem.buttonView;
+        itemView.tag = i;
+        [self addSubview:itemView];
+        
+        itemView.frame = CGRectMake(itemW * i, 0, itemW, size.height);
+        if (customItem.customViewFrameBlock)
+        {
+            itemView.frame = customItem.customViewFrameBlock(itemView.frame);
+        }
+    }
+}
+
+- (void)selectItem:(UIButton *)btn
+{
+    self.selectedButton = btn;
+
+    ZJItem *item = self.myItems[btn.tag];
+    ZJItemType type = item.type;
+
+    switch (type)
+    {
+        case ZJItemTypeInsert:
+        {
+
+            break;
+        }
+            
+        case ZJItemTypeOrigin:
+        case ZJItemTypeReplace:
+        {
+            self.itemSelected(item.index);
+        }
+            
+        default:
+            break;
+    }
+    
+    if (item.itemClicked) {
+        item.itemClicked();
     }
 }
 
 
-- (NSMutableArray *)myItems{
+#pragma mark -
+#pragma mark - Setter / Getter
+
+- (NSMutableArray *)myItems
+{
     if (_myItems == nil) {
         _myItems = [NSMutableArray array];
     }
     return _myItems;
 }
+
+- (void)setSelectedButton:(UIButton *)selectedButton
+{
+    if (_selectedButton != selectedButton) {
+        _selectedButton.selected = NO;
+        selectedButton.selected = YES;
+        _selectedButton = selectedButton;
+    }
+}
+
 
 @end

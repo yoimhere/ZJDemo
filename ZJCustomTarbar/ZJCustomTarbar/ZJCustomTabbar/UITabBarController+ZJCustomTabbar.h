@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ZJTabBar.h"
 
-@interface UITabBarController (ZJCustomTabbar)<ZJTabBarDelegate>
+
+@interface UITabBarController (ZJCustomTabbar)
+
+@property(nonatomic, readonly) ZJTabBar *zj_customTabBar;
 
 @end

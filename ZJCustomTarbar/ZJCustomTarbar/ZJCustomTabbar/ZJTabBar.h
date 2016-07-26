@@ -8,16 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZJTabBar;
-@protocol ZJTabBarDelegate  <NSObject>
 
-- (void)zj_tabbar:(ZJTabBar *)tabbar selectIndex:(NSInteger)selectIndex;
+typedef enum {
+    ZJItemTypeOrigin,// Not Work For customItems
+    ZJItemTypeInsert,
+    ZJItemTypeReplace
+}ZJItemType;
+
+@interface ZJItem : NSObject
+
+@property(strong, nonatomic) UIButton *buttonView;
+@property(copy  , nonatomic) CGRect(^customViewFrameBlock)(CGRect originFrame);
+
+@property(assign, nonatomic) NSInteger index;
+@property(assign, nonatomic) ZJItemType type;
+@property(copy  , nonatomic) void(^itemClicked)();
+
 
 @end
 
+
+
 @interface ZJTabBar : UITabBar
 
-@property(weak, nonatomic) id<ZJTabBarDelegate> zj_delegate;
-@property(copy, nonatomic) UIView* (^customItemBlock)(NSInteger index);
+@property(nonatomic, copy) NSArray *customItems;
+- (instancetype)initWithItemSelected:(void(^)(NSInteger selectIndex))itemSelected;
 
 @end

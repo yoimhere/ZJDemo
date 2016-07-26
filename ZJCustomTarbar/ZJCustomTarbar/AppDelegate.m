@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "UITabBarController+ZJCustomTabbar.h"
+#import "UITabBarController+ZJCustomTabbar.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
+    
+    ZJItem *item0 =[ZJItem new];
+    item0.index = 1;
+    item0.buttonView = [[UIButton alloc] init];
+    item0.type = ZJItemTypeReplace;
+    
+    tabBarVC.zj_customTabBar.customItems = @[item0];
     return YES;
 }
 

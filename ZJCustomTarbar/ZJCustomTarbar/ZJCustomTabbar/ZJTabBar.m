@@ -56,6 +56,7 @@
 
 - (void)removeOldItems
 {
+    uibar
     for (ZJItem *oldItem in self.myItems) {
         [oldItem.buttonView removeFromSuperview];
     }
@@ -68,17 +69,10 @@
     {
         UITabBarItem *barItem = self.items[i];
         UIView *view = [barItem valueForKey:@"view"];
-        view.hidden = YES;
-        
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:barItem.title forState:UIControlStateNormal];
-        [btn setImage:barItem.image forState:UIControlStateNormal];
-        [btn setImage:barItem.selectedImage forState:UIControlStateSelected];
-        [btn addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
         
         ZJItem *item = [ZJItem new];
         item.index = i;
-        item.buttonView = btn;
+        item.buttonView = view;
         item.type = ZJItemTypeOrigin;
         
         [self.myItems addObject:item];
@@ -122,7 +116,7 @@
                 
             case ZJItemTypeReplace:
             {
-                [customItem.buttonView addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
+//                [customItem.buttonView addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
                 [self.myItems replaceObjectAtIndex:customItem.index withObject:customItem];
                 break;
             }

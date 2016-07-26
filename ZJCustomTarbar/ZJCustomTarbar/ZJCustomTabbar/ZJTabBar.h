@@ -17,7 +17,7 @@ typedef enum {
 
 @interface ZJItem : NSObject
 
-@property(strong, nonatomic) UIButton *buttonView;
+@property(strong, nonatomic) UIView *buttonView;
 @property(copy  , nonatomic) CGRect(^customViewFrameBlock)(CGRect originFrame);
 
 @property(assign, nonatomic) NSInteger index;

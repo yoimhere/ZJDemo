@@ -35,10 +35,11 @@ static void *kCustomTabBarKey;
             weakSelf.selectedIndex = selectIndex;
         }];
         objc_setAssociatedObject(self, &kCustomTabBarKey, customTabBar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
     }
     return self;
 }
+
+
 
 - (void)zj_viewDidLoad
 {

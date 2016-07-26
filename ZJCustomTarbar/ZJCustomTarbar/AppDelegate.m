@@ -23,6 +23,7 @@
     ZJItem *item0 =[ZJItem new];
     item0.index = 1;
     item0.buttonView = [[UIButton alloc] init];
+    item0.buttonView.backgroundColor = [UIColor redColor];
     item0.type = ZJItemTypeReplace;
     
     tabBarVC.zj_customTabBar.customItems = @[item0];
